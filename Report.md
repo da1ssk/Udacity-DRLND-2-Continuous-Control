@@ -6,8 +6,6 @@ I used the code from [`ddpg-bipedal`](https://github.com/udacity/deep-reinforcem
 
 The training algorithm thus is the Deep Deterministic Policy Gradient (DDPG).
 
-It took 2900 episodes to pass the criteria.
-
 ### Agent ([`ddpg_agent.py`](ddpg_agent.py))
 I use the `Agent` class from the `ddpg-bipedal` repo with minor changes.
 
@@ -44,7 +42,7 @@ The Critic is also a neural network with fully connected layers as well.
 - Output: single float Q value for the state + action pair
 
 ## Plot of Rewards
-Here are the latest average scores for every 100 episodes.
+Here are the latest average scores for every 100 episodes. 
 ```
 Episode 100	Average Score: 0.78
 Episode 200	Average Score: 2.37
@@ -81,6 +79,8 @@ Episode 3000	Average Score: 30.66
 Here is the plot of rewards over episodes.
 
 ![rewards](https://user-images.githubusercontent.com/1985201/119428521-07d21400-bcdb-11eb-8f9c-c762c6e62bbe.png)
+
+It took 2900 episodes to pass the criteria.
 
 ## Using the learned weight for visualization
 I visualized the agent by loading the learned actor's weight (`checkpoint_actor.pth`).
