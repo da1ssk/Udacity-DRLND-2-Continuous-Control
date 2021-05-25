@@ -21,7 +21,27 @@ I chose Option 1: Solve the First Version.
 If the average score of the latest 100 episodes exceeds +30, it is considered solved.
 
 ## Getting started
-Load `Continuous_Control.ipynb` in Jupyter notebook, then follow the instruction.
+
+### Python environment
+Follow the instruction by Udacity [here](https://github.com/udacity/deep-reinforcement-learning#dependencies) to set up the Python environment. 
+
+### Unity environment
+1. Download the environment from one of the links below. For faster training, choose the "No visualization" environment.
+
+    **No visualization:**
+    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip)
+
+    **With visualization:**
+    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
+    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
+    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
+    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+
+2. Move the downloaded file in the same folder as in this Readme, then unzip it.
+
+3. Load `Continuous_Control.ipynb` in Jupyter notebook, then follow the instruction.
+
+For more information, please refer to the [Udacity's instruction](https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control).
 
 ## Report
 The report can be found [here](Report.md)
