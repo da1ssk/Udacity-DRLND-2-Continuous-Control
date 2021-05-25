@@ -6,9 +6,7 @@ I used the code from [`ddpg-bipedal`](https://github.com/udacity/deep-reinforcem
 
 The training algorithm thus is the Deep Deterministic Policy Gradient (DDPG).
 
-The hyperparameters that are passed to `ddpg` function is modified so it will match the environment.
-
-- `n_episodes = 3000`  # max number of episodes
+It took 2900 episodes to pass the criteria.
 
 ### Agent ([`ddpg_agent.py`](ddpg_agent.py))
 I use the `Agent` class from the `ddpg-bipedal` repo with minor changes.
@@ -41,23 +39,22 @@ The Actor is a neural network with fully connected layers. The first and second 
 The Critic is also a neural network with fully connected layers as well.
 - Input: 33 nodes corresponding to each state element
 - First layer: 256 nodes
-- Second layer: 256 + 4 nodes where the 4 nodes are for the output action values from the Actor network
+- Second layer: 256 + 4 nodes where the 4 nodes are for the sampled action
 - Third layer: 128 nodes
 - Output: single float Q value for the state + action pair
 
 ## Plot of Rewards
 Here are the latest average scores for every 100 episodes.
-
 ```
-Episode 100	    Average Score: 0.78
-Episode 200	    Average Score: 2.37
-Episode 300	    Average Score: 4.12
-Episode 400	    Average Score: 6.01
-Episode 500	    Average Score: 8.29
-Episode 600	    Average Score: 7.93
-Episode 700	    Average Score: 7.69
-Episode 800	    Average Score: 8.30
-Episode 900	    Average Score: 10.17
+Episode 100	Average Score: 0.78
+Episode 200	Average Score: 2.37
+Episode 300	Average Score: 4.12
+Episode 400	Average Score: 6.01
+Episode 500	Average Score: 8.29
+Episode 600	Average Score: 7.93
+Episode 700	Average Score: 7.69
+Episode 800	Average Score: 8.30
+Episode 900	Average Score: 10.17
 Episode 1000	Average Score: 10.37
 Episode 1100	Average Score: 10.63
 Episode 1200	Average Score: 11.11
@@ -125,7 +122,7 @@ print('Total score (averaged over agents) this episode: {}'.format(np.mean(score
 In the benchmark implementation section in the course, I noticed that it reaches the solution much faster (less than 200 episodes for the single agent). That’s the evidence that there are better hyperparameters and network models. I would love to know Udacity's solution.
 
 ### Work on the 20 agents
-It would be challenging and fun the second option. However, I feel like I'd like to know what would be the best solution for the single-agent case before going further. 
+It would be challenging and fun to work on the second option. However, I feel like I'd like to know what would be the best solution for the single-agent case before going further. 
 
 ### Development cycle
 Again, the workspace Udacity provides was a huge pain. Namely, it takes too much time to: 
@@ -133,12 +130,13 @@ Again, the workspace Udacity provides was a huge pain. Namely, it takes too much
 - install (!?) python
 - load the unity environment
 - train, even with GPU support
-Another big problem is that if we stop the training, I need to refresh the workspace every time, again repeating the above time-consuming process.
-There is no point unless the cloud environment is better than a local one. This is future work for Udacity.
+
+Another big problem is that when I stop the training, I need to refresh the workspace every time, again repeating the above time-consuming process.
+There is no point using the workspace unless the cloud environment is better than a local one. This is future work for Udacity.
 
 ## Development Environment
-First I used the Udacity workspace in the course for this project. As I almost used up the GPU usage, I decided to build my local environment in my Ubuntu with Nvidia GeForce GTX 1080 GPU. It turned out it trains much faster than the Udacity environment, which leads me to a solution with much faster iterations.
+First I used the Udacity workspace in the course for this project. As I almost used up the GPU usage, I decided to build my local environment on my Ubuntu with Nvidia GeForce GTX 1080 GPU. It turned out it trains much faster than the Udacity environment, which leads me to a solution with much faster iterations.
 
 ### Use of Reacher_One_Linux_NoVis
-I used the single reacher version with no visualization for the sake of learning speed. I couldn't find the link to the headless binary from the course material, but I found it from a random former student's report, for example, [here](https://github.com/bobiblazeski/reacher).
+I used the single reacher version with no visualization for the sake of learning speed. I couldn't find the link to the headless binary in the course material, but I found it from a random former student's report, for example, [here](https://github.com/bobiblazeski/reacher).
 Please add the link to the course material for future students.

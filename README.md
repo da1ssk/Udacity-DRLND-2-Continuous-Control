@@ -4,8 +4,6 @@ In this project, we train a double-jointed arm to reach target locations.
 
 The simulation environment is based on Unity Environment. The code is available [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/python/unityagents)
 
-Here is a result animation with the trained actor network. The score for this episode is 30.15.)
-
 <img src="Reacher_with_learned_weights.gif" width=480>
 
 ### Rewards
